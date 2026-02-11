@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenLeaf | Premium Cannabis Experience</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<style>
+  /* ================= TOP HEADER AREA ================= */
+.top-header-area {
+  background: #162a20; /* dark green */
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+}
+
+.top-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Left Side */
+.top-left a, .top-left span {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 500;
+}
+
+.top-left a:hover {
+  color: #2ecc71;
+}
+
+
+
+
+/* Right Side */
+.top-right a {
+  color: #fff;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.top-right a:hover {
+  color: #2ecc71;
+  transform: scale(1.2);
+}
+
+/* Responsive: Stack on Mobile */
+@media (max-width: 768px) {
+  .top-header-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .top-right a {
+    margin-left: 0.5rem;
+  }
+  .top-left a, .top-left span {
+    margin-right: 0.5rem;
+  }
+}
+
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #2ecc71;
+  border-radius: 5px;
+}
+
+/* ================= MOBILE NAV ================= */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #0b1711;
+    width: 100%;
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f1f17;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+
+
+
+
+/* ================= HEADER ================= */
+.header {
+  background: #0b1711;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2ecc71;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #2ecc71;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 90vh;
+  background: url("../img/matthew-brodeur-qcCPIhhdgTw-unsplash.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero h2 span {
+  color: #2ecc71;
+}
+
+.hero p {
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+  <!-- ================= TOP CONTACT BAR ================= -->
+<!-- ================= TOP HEADER AREA ================= -->
+<section class="top-header-area">
+  <div class="container top-header-container">
+
+    <!-- Left Side: Contact Info -->
+    <div class="top-left">
+      <a href="tel:+271234567890"><i class="fas fa-phone-alt"></i> +27 123 456 7890</a>
+      <span><i class="fas fa-clock"></i> Mon - Sat: 08:00 - 17:00 | Sun: 10:00 - 17:00</span>
+    </div>
+
+    <!-- Right Side: Social Icons -->
+    <div class="top-right">
+      <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.tiktok.com/@YourPage" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://wa.me/271234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ================= HEADER / NAV ================= -->
+ <header class="header">
+  <div class="container nav">
+    <h1 class="logo">GreenLeaf</h1>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h2>More Than Cannabis.<br><span>An Experience.</span></h2>
+      <p>
+  A remium cannabis, ethically sourced 
+  and meticulously crafted for connoisseurs and mindful users alike. 
+  Experience unparalleled quality, consistency, and sophistication in every product.
+</p>
+
+      <div class="hero-buttons">
+        <a href="products.html" class="btn primary">Explore Products</a>
+     
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= ABOUT US ================= -->
+<section class="about-us">
+  <div class="container about-us-grid">
+
+    <!-- Left Column: Image -->
+    <div class="about-image">
+      <img src="./img/matthew-brodeur-qcCPIhhdgTw-unsplash.jpg" alt="About GreenLeaf">
+    </div>
+
+    <!-- Right Column: Text + Icons -->
+    <div class="about-content">
+      <h3 class="section-title">About GreenLeaf</h3>
+      <p>
+        At GreenLeaf, we craft premium cannabis experiences with a focus on quality, 
+        sustainability, and responsible use. Every product is ethically sourced and lab-tested 
+        to ensure consistency and safety.
+      </p>
+              
+      <p>Carefully cultivated for balance and potency.Every batch is tested for purity and safety.Promoting mindful and legal use of cannabis.</p>
+
+      <a href="about.html" class="btn primary">Learn More</a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ================= ABOUT US ================= -->
+
+
+
+
+  <!-- ================= FEATURED PRODUCTS ================= -->
+  <section class="featured">
+    <div class="container">
+      <h3 class="section-title">Featured Products</h3>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <img src="./img/crystalweed-cannabis-2ZgivT-A2K4-unsplash.jpg" alt="Flower">
+          <h4>Premium Flower</h4>
+          <p>High-quality strains cultivated for balance and potency.</p>
+        </div>
+
+        <div class="product-card">
+          <img src="./img/jeff-w-7N5Ns214iiw-unsplash.jpg" alt="Edibles">
+          <h4>Edibles</h4>
+          <p>Carefully dosed for consistent and enjoyable experiences.</p>
+        </div>
+
+        <div class="product-card">
+          <img src="./img/crystalweed-cannabis-i11Di7CACfc-unsplash.jpg" alt="Oils">
+          <h4>Oils & Vapes</h4>
+          <p>Refined extracts for convenience and precision.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section class="why-us">
+    <div class="container">
+      <h3 class="section-title">Why Choose GreenLeaf</h3>
+      <div class="why-grid">
+
+        <div class="why-card">
+          <h4>🌱 Sustainably Grown</h4>
+          <p>Our products are cultivated using ethical and environmentally conscious methods.</p>
+        </div>
+
+        <div class="why-card">
+          <h4>🧪 Lab Tested</h4>
+          <p>Every batch is tested to ensure quality, purity, and safety.</p>
+        </div>
+
+        <div class="why-card">
+          <h4>🔒 Fully Compliant</h4>
+          <p>We operate strictly within legal frameworks and regulations.</p>
+        </div>
+
+        <div class="why-card">
+          <h4>🧠 Mindful Use</h4>
+          <p>Designed for informed, responsible, and balanced consumption.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- ================= EXPERIENCE TEASER ================= -->
+<section class="experience">
+  <div class="experience-bg"></div>
+  <div class="container experience-grid">
+
+    <!-- Left Column: Text -->
+    <div class="experience-text">
+      <h3>Discover the <span>GreenLeaf Experience</span></h3>
+      <p>
+        From seed to your lifestyle, we bring you premium cannabis with 
+        transparency, responsibility, and modern elegance. Dive into an 
+        experience crafted for enthusiasts and mindful users alike.
+      </p>
+      <a href="experience.html" class="btn primary">Explore the Experience</a>
+    </div>
+
+    <!-- Right Column: Floating Cards / Highlights -->
+    <div class="experience-cards">
+      <div class="card fade-in" style="--delay:0s;">
+        <h4>🌱 Cultivation</h4>
+        <p>Ethically grown using sustainable methods.</p>
+      </div>
+      <div class="card fade-in" style="--delay:0.2s;">
+        <h4>🧪 Lab Tested</h4>
+        <p>Consistency, safety, and quality assured.</p>
+      </div>
+      <div class="card fade-in" style="--delay:0.4s;">
+        <h4>🎯 Lifestyle</h4>
+        <p>Seamless integration into modern, mindful lifestyles.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ================= RESPONSIBLE USE ================= -->
+  <section class="responsible">
+    <div class="container">
+      <p>
+        GreenLeaf promotes responsible use. Do not drive or operate machinery while under
+        the influence. Keep out of reach of minors.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+ <!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- Column 1: About -->
+    <div class="footer-about">
+      <h4>GreenLeaf</h4>
+      <p>
+        Premium cannabis crafted with care and responsibility. Elevate your lifestyle with ethically sourced products and mindful experiences.
+      </p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact -->
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fas fa-phone-alt"></i> +27 123 456 7890</p>
+      <p><i class="fas fa-envelope"></i> info@greenleaf.co.za</p>
+      
+        <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@YourPage" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/271234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© 2026 GreenLeaf. 18+ Only | Use Responsibly</p>
+  </div>
+</footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

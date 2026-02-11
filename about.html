@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | GreenLeaf</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* ================= RESET & BASE ================= */
+
+/* ================= TOP HEADER AREA ================= */
+.top-header-area {
+  background: #162a20; /* dark green */
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+}
+
+.top-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Left Side */
+.top-left a, .top-left span {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 500;
+}
+
+.top-left a:hover {
+  color: #2ecc71;
+}
+
+/* Right Side */
+.top-right a {
+  color: #fff;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.top-right a:hover {
+  color: #2ecc71;
+  transform: scale(1.2);
+}
+
+/* Responsive: Stack on Mobile */
+@media (max-width: 768px) {
+  .top-header-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .top-right a {
+    margin-left: 0.5rem;
+  }
+  .top-left a, .top-left span {
+    margin-right: 0.5rem;
+  }
+}
+
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #2ecc71;
+  border-radius: 5px;
+}
+
+/* ================= MOBILE NAV ================= */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #0b1711;
+    width: 100%;
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f1f17;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+
+
+
+
+/* ================= HEADER ================= */
+.header {
+  background: #0b1711;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2ecc71;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #2ecc71;
+}
+
+
+
+    /* ================= ABOUT HERO ================= */
+.about-hero {
+  position: relative;
+  min-height: 100vh;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Background Image */
+.aboutt-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.aboutt-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutt-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(10, 10, 10, 0.95) 0%,
+    rgba(10, 10, 10, 0.8) 50%,
+    rgba(10, 10, 10, 0.6) 100%
+  );
+}
+
+/* Container */
+.aboutt-container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Grid Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* ========== LEFT COLUMN - STORY ========== */
+.about-story {
+  color: white;
+}
+
+.about-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.about-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.about-highlight {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+}
+
+.about-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(0, 200, 100, 0.3);
+  z-index: -1;
+}
+
+.about-divider {
+  width: 60px;
+  height: 2px;
+  background: #00c864;
+  margin: 1.5rem 0;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+/* Stats */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00c864;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.25rem;
+}
+
+/* ========== RIGHT COLUMN - VALUES ========== */
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.75rem 1.5rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.value-card p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ========== SCROLL INDICATOR ========== */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 20;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: scrollDown 2s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(-100%); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .aboutt-container {
+    padding: 0 2rem;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about-story {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .about-divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .about-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .about-stats {
+    justify-content: center;
+  }
+  
+  .about-values {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutt-hero {
+    min-height: auto;
+    padding: 6rem 0;
+  }
+  
+  .aboutt-container {
+    padding: 0 1.5rem;
+  }
+  
+  .about-title {
+    font-size: 2.2rem;
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+  
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 4rem 0;
+  }
+  
+  .about-container {
+    padding: 0 1.25rem;
+  }
+  
+  .about-title {
+    font-size: 1.8rem;
+  }
+  
+  .about-description {
+    font-size: 1rem;
+  }
+  
+  .about-stats {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .stat-item {
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+/* about */ 
+/* ================= ABOUT HERO ================= */
+.intrro-bannner {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+/* Background */
+.bannner-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bannner-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+/* Content */
+.bannner-wrapper {
+  position: relative;
+  max-width: 800px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 10;
+}
+
+.bannner-content {
+  color: white;
+}
+
+.bannner-main-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.brannd-name {
+  color: #00e676;
+  position: relative;
+  display: inline-block;
+}
+
+.brannd-name::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(0, 230, 118, 0.2);
+  z-index: -1;
+}
+
+.bannner-description {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-bannner {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .bannner-wrapper {
+    padding: 0 1.5rem;
+  }
+  
+  .bannner-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intrro-bannner {
+    height: 50vh;
+    min-height: 350px;
+  }
+  
+  .bannner-main-title {
+    font-size: 2rem;
+  }
+  
+  .bannner-wrapper {
+    padding: 0 1.25rem;
+  }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 4rem 0;
+  }
+  
+  .about-container {
+    padding: 0 1.25rem;
+  }
+  
+  .about-title {
+    font-size: 1.8rem;
+  }
+  
+  .about-description {
+    font-size: 1rem;
+  }
+  
+  .about-stats {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .stat-item {
+    align-items: center;
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .aboutt-hero {
+    min-height: auto;
+    padding: 6rem 0;
+  }
+  
+  .aboutt-container {
+    padding: 0 1.5rem;
+  }
+  
+  .about-title {
+    font-size: 2.2rem;
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+  
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .aboutt-container {
+    padding: 0 2rem;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about-story {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .about-divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .about-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .about-stats {
+    justify-content: center;
+  }
+  
+  .about-values {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+ <!-- ================= TOP HEADER AREA ================= -->
+<section class="top-header-area">
+  <div class="container top-header-container">
+
+    <!-- Left Side: Contact Info -->
+    <div class="top-left">
+      <a href="tel:+271234567890"><i class="fas fa-phone-alt"></i> +27 123 456 7890</a>
+      <span><i class="fas fa-clock"></i> Mon - Sat: 08:00 - 17:00 | Sun: 10:00 - 17:00</span>
+    </div>
+
+    <!-- Right Side: Social Icons -->
+    <div class="top-right">
+      <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.tiktok.com/@YourPage" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://wa.me/271234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ================= HEADER / NAV ================= -->
+ <header class="header">
+  <div class="container nav">
+    <h1 class="logo">GreenLeaf</h1>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= ABOUT HERO ================= -->
+<section class="intrro-banner">
+  <div class="bannner-media">
+    <img src="./img/bowl-colorful-marmalades-with-cup-hot-tea-dark-surface.jpg" alt="GreenLeaf Cannabis">
+    <div class="media-shade"></div>
+  </div>
+  
+  <div class="bannner-wrapper">
+    <div class="bannner-content">
+      <h1 class="bannner-main-title">
+        About <span class="brannd-name">GreenLeaf</span>
+      </h1>
+      <p class="bannner-description">
+        Rooted in quality, transparency, and responsibility. 
+        Premium cannabis, crafted with care since 2018.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ================= RESPONSIBLE USE ================= -->
+  <section class="responsible">
+    <div class="container">
+      <p>
+        GreenLeaf promotes responsible use. Do not drive or operate machinery while under
+        the influence. Keep out of reach of minors.
+      </p>
+    </div>
+  </section>
+
+<!-- ================= ABOUT HERO ================= -->
+<section class="aboutt-hero">
+  <div class="aboutt-image">
+    <img src="./img/2h-media-sQ9XS-kq1ms-unsplash.jpg" alt="GreenLeaf Cannabis">
+    <div class="about-overlay"></div>
+  </div>
+  
+  <div class="aboutt-container">
+    <div class="about-grid">
+      <!-- Left Column - Brand Story -->
+      <div class="about-story">
+        <span class="about-badge">● EST. 2018</span>
+        <h1 class="about-title">
+          Rooted in<br>
+          <span class="about-highlight">Quality & Trust</span>
+        </h1>
+        <div class="about-divider"></div>
+        <p class="about-description">
+          GreenLeaf began with a simple mission: provide premium cannabis with complete transparency. 
+          From seed to sale, every product is lab-tested and crafted with care.
+        </p>
+        
+        <!-- Stats -->
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Years</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">10k+</span>
+            <span class="stat-label">Customers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Strains</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Lab Tested</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - Values Cards -->
+      <div class="about-values">
+        <div class="value-card">
+          <div class="value-icon">🌿</div>
+          <h3>Organic Practices</h3>
+          <p>No pesticides, no chemicals. Just pure, sun-grown cannabis.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">🔬</div>
+          <h3>Lab Tested</h3>
+          <p>Every batch tested for potency, purity, and safety.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Fair Trade</h3>
+          <p>Direct partnerships with local farmers and growers.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">📦</div>
+          <h3>Fast & Discreet</h3>
+          <p>Secure packaging, delivered to your door in 2-3 days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+  <!-- ================= OUR STORY ================= -->
+  <section class="featured">
+    <div class="container">
+      <h3 class="section-title">Our Story</h3>
+      <p style="max-width: 800px; margin: auto; text-align: center;">
+        GreenLeaf was founded with a simple mission: to provide premium cannabis
+        products while promoting responsible use and full legal compliance.
+        We believe cannabis should be approached with respect, education,
+        and modern standards.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= MISSION & VALUES ================= -->
+  <section class="why-us">
+    <div class="container">
+      <h3 class="section-title">Our Mission & Values</h3>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <h4>🌿 Quality First</h4>
+          <p>Every product is selected and tested to meet strict quality standards.</p>
+        </div>
+
+        <div class="why-card">
+          <h4>⚖️ Compliance</h4>
+          <p>We operate within all applicable laws and regulatory frameworks.</p>
+        </div>
+
+        <div class="why-card">
+          <h4>🧠 Education</h4>
+          <p>We empower our customers to make informed, responsible decisions.</p>
+        </div>
+
+        <div class="why-card">
+          <h4>🤝 Transparency</h4>
+          <p>Honest sourcing, clear information, and ethical business practices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= LEGAL & COMPLIANCE ================= -->
+  <section class="featured">
+    <div class="container">
+      <h3 class="section-title">Legal & Compliance</h3>
+      <p style="max-width: 900px; margin: auto; text-align: center;">
+        GreenLeaf operates in accordance with all local cannabis regulations.
+        All products displayed are subject to availability and legal eligibility.
+        Sales and distribution are restricted to individuals of legal age.
+      </p>
+    </div>
+  </section>
+
+ <!-- ================= RESPONSIBILITY ================= -->
+  <section class="responsible">
+    <div class="container">
+      <p>
+        Cannabis is intended for responsible adults only.
+        Please consult a professional if you have health concerns.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ================= CTA ================= -->
+  <section class="experience">
+    <div class="container experience-content">
+      <h3>Have Questions?</h3>
+      <p>We’re here to help and provide clarity.</p>
+      <a href="contact.html" class="btn primary">Contact Us</a>
+    </div>
+  </section>
+
+ <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- Column 1: About -->
+    <div class="footer-about">
+      <h4>GreenLeaf</h4>
+      <p>
+        Premium cannabis crafted with care and responsibility. Elevate your lifestyle with ethically sourced products and mindful experiences.
+      </p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact -->
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fas fa-phone-alt"></i> +27 123 456 7890</p>
+      <p><i class="fas fa-envelope"></i> info@greenleaf.co.za</p>
+      
+        <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@YourPage" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/271234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© 2026 GreenLeaf. 18+ Only | Use Responsibly</p>
+  </div>
+</footer>
+ 
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
