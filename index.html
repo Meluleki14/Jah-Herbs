@@ -1,490 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GreenLeaf | Premium Cannabis Experience</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <head>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>JAH HERBS</title>
 
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
-  /* ================= TOP HEADER AREA ================= */
-.top-header-area {
-  background: #162a20; /* dark green */
-  color: #fff;
-  font-size: 0.9rem;
-  padding: 0.4rem 0;
-}
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="./css/templatemo-finance-business.css">
+    <link rel="stylesheet" href="./css/owl.css">
+<!--
 
-.top-header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
+Finance Business TemplateMo
 
-/* Left Side */
-.top-left a, .top-left span {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-weight: 500;
-}
+https://templatemo.com/tm-545-finance-business
 
-.top-left a:hover {
-  color: #2ecc71;
-}
+-->
+  </head>
 
+  <body>
 
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
 
-
-/* Right Side */
-.top-right a {
-  color: #fff;
-  margin-left: 1rem;
-  font-size: 1.1rem;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.top-right a:hover {
-  color: #2ecc71;
-  transform: scale(1.2);
-}
-
-/* Responsive: Stack on Mobile */
-@media (max-width: 768px) {
-  .top-header-container {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .top-right a {
-    margin-left: 0.5rem;
-  }
-  .top-left a, .top-left span {
-    margin-right: 0.5rem;
-  }
-}
-
-
-/* ================= HAMBURGER ================= */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #2ecc71;
-  border-radius: 5px;
-}
-
-/* ================= MOBILE NAV ================= */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  nav {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: #0b1711;
-    width: 100%;
-    display: none;
-  }
-
-  nav.active {
-    display: block;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #0f1f17;
-  color: #ffffff;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  width: 100%;
-  display: block;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-
-
-
-
-
-/* ================= HEADER ================= */
-.header {
-  background: #0b1711;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 0;
-}
-
-.logo {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #2ecc71;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-.nav-links a {
-  font-size: 0.95rem;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links .active {
-  color: #2ecc71;
-}
-
-/* ================= HERO ================= */
-.hero {
-  height: 90vh;
-  background: url("../img/matthew-brodeur-qcCPIhhdgTw-unsplash.jpg") center/cover no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
-}
-
-.hero h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero h2 span {
-  color: #2ecc71;
-}
-
-.hero p {
-  margin-bottom: 2rem;
-  font-size: 1.05rem;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-
-
-
-</style>
-</head>
-<body>
-
-
-  <!-- ================= TOP CONTACT BAR ================= -->
-<!-- ================= TOP HEADER AREA ================= -->
-<section class="top-header-area">
-  <div class="container top-header-container">
-
-    <!-- Left Side: Contact Info -->
-    <div class="top-left">
-      <a href="tel:+271234567890"><i class="fas fa-phone-alt"></i> +27 123 456 7890</a>
-      <span><i class="fas fa-clock"></i> Mon - Sat: 08:00 - 17:00 | Sun: 10:00 - 17:00</span>
-    </div>
-
-    <!-- Right Side: Social Icons -->
-    <div class="top-right">
-      <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.tiktok.com/@YourPage" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://wa.me/271234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
-
-  </div>
-</section>
-
-
-  <!-- ================= HEADER / NAV ================= -->
- <header class="header">
-  <div class="container nav">
-    <h1 class="logo">GreenLeaf</h1>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <nav id="nav-menu">
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
-  <!-- ================= HERO SECTION ================= -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <h2>More Than Cannabis.<br><span>An Experience.</span></h2>
-      <p>
-  A remium cannabis, ethically sourced 
-  and meticulously crafted for connoisseurs and mindful users alike. 
-  Experience unparalleled quality, consistency, and sophistication in every product.
-</p>
-
-      <div class="hero-buttons">
-        <a href="products.html" class="btn primary">Explore Products</a>
-     
+    <!-- Header -->
+    <div class="sub-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-xs-12">
+            <ul class="left-info">
+              <li><a href="#"><i class="fa fa-clock-o"></i>Mon - Sun 10:00 am -22:00 pm  </a></li>
+              <li><a href="#"><i class="fa fa-phone"></i>071 749 0903</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="right-icons">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://wa.me/+27746311700?text=I%20want%20to%20place%20an%20order"><i class="fa fa-whatsapp"></i></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
 
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h2>JAH HERBS</h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home
+                
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Products</a>
+              </li>                          
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-  <!-- ================= ABOUT US ================= -->
-<section class="about-us">
-  <div class="container about-us-grid">
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="main-banner header-text" id="top">
+        <div class="Modern-Slider">
+          <!-- Item -->
+          <div class="item item-1">
+            <div class="img-fill">
+                <div class="text-content">
+                   <h6>❤️💛💚  JAH GUIDANCE  ❤️💛💚</h6>
+                        <h4>HERBAL WISDOM<br><span>roots & culture</span></h4>
+                 <p>I-tal herbs for mind & spirit. Jah provided the green for meditation and natural healing. Embrace the sacred herb with love and righteousness.</p>
+                        <a href="contact.html" class="filled-button">honour the herb</a>
+                </div>
+            </div>
+          </div>
+          <!-- // Item -->
+          <!-- Item -->
+          <div class="item item-2">
+            <div class="img-fill">
+                <div class="text-content">
+                  <h6>🌿  ONE LOVE  🌿</h6>
+                        <h4>CBD BALM<br><span>soothing from nature</span></h4>
+                        <p>Discover the healing power of the Rastaman's remedy. Pure CBD extracts, no chemicals, just the earth's medicine. Feel the harmony in every drop.</p>
+                        <a href="services.html" class="filled-button">rasta remedies</a>     </div>
+            </div>
+          </div>
+          <!-- // Item -->
+          <!-- Item -->
+          <div class="item item-3">
+            <div class="img-fill">
+                <div class="text-content">
+                  <h6>🔥  GROUNDATION  🔥</h6>
+                        <h4>HERBAL VIBES<br><span>nyabinghi spirit</span></h4>
+                        <p>From the hills of Zion, we bring you hand-trimmed, sun-grown herbs. No chemicals, only natural cultivation. Praise Jah for the green blessing.</p>
+                        <a href="about.html" class="filled-button">learn Rasta ways</a>
+                </div>
+            </div>
+          </div>
+          <!-- // Item -->
+        </div>
+    </div>
+    <!-- Banner Ends Here -->
 
-    <!-- Left Column: Image -->
-    <div class="about-image">
-      <img src="./img/matthew-brodeur-qcCPIhhdgTw-unsplash.jpg" alt="About GreenLeaf">
+    <div class="request-form">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h4>Seek the help of Zion</h4>
+             <span>Let I-n-I guide you to pure, natural herbs and sacred remedies. Rasta love for all.</span>
+          </div>
+          <div class="col-md-4">
+            <a href="contact.html" class="border-button">Contact Us</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Right Column: Text + Icons -->
-    <div class="about-content">
-      <h3 class="section-title">About GreenLeaf</h3>
-      <p>
-        At GreenLeaf, we craft premium cannabis experiences with a focus on quality, 
-        sustainability, and responsible use. Every product is ethically sourced and lab-tested 
-        to ensure consistency and safety.
-      </p>
+    <div class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>JAH <em>HERBS</em></h2>
+              <span>Sacred greens for body and soul · ital living</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item">
+              <img src="assets/images/service_01.jpg" alt="">
+              <div class="down-content">
+               <h4>Sacred Ganja</h4>
+                <p>Pure, sun‑grown herbs from the hills of Zion. No chemicals, only natural cultivation handed down by Rasta elders.</p>
+                <a href="" class="filled-button">Blessings</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item">
+              <img src="assets/images/service_02.jpg" alt="">
+              <div class="down-content">
+                 <h4>Roots & Culture</h4>
+                <p>Traditional herbs used for meditation and grounding. Connect with I‑n‑I through the sacred leaf of wisdom.</p>
+                <a href="" class="filled-button">I‑tal</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item">
+              <img src="assets/images/service_03.jpg" alt="">
+              <div class="down-content">
+               <h4>Healing Balm</h4>
+                <p>CBD harmony made from the earth’s medicine. Soothing tinctures and balms for natural wellness and peace.</p>
+                <a href="" class="filled-button">JAH love</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <div class="fun-facts">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="left-content">
+              <span>JAH BLESS · ITAL VIBES</span>
+              <h2>Sacred herbs for your <em>natural growth</em></h2>
+              <p>Rastafarian elders have passed down the wisdom of the green for meditation, healing, and grounding. I-n-I cultivate only sun-grown, chemical-free herbs from the hills of Zion. 
+              <br><br>Feel the power of nature’s medicine in every leaf. No synthetic additives, just pure roots culture handed down through generations.</p>
+              <a href="" class="filled-button">ROOTS</a>
+            </div>
+          </div>
+          <div class="col-md-6 align-self-center">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="count-area-content">
+                  <div class="count-digit">945</div>
+                  <div class="count-title">SUNRISES</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="count-area-content">
+                  <div class="count-digit">1280</div>
+                  <div class="count-title">BLESSED REVIEWS</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="count-area-content">
+                  <div class="count-digit">578</div>
+                  <div class="count-title">HERBAL BATCHES</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="count-area-content">
+                  <div class="count-digit">26</div>
+                  <div class="count-title">ZION MEDALS</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+<div class="more-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="more-info-content">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="left-image">
+                    <img src="./img/matthew-brodeur-qcCPIhhdgTw-unsplash.jpg" alt="JAH HERBS cultivation">
+                  </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                  <div class="right-content">
+                    <span>ROOTS OF ZION</span>
+                    <h2>Get to know about <em>JAH HERBS</em></h2>
+                    <p>I-n-I cultivate sacred herbs the Rastafari way — sun-grown, chemical-free, and blessed by the elders. Every leaf is harvested with meditation and prayer, honoring the gift of nature.<br><br>From the hills of Jamaica to brothers and sisters worldwide, we share the healing power of ital herbs. No greed, no corruption — only natural love and unity.</p>
+                    <a href="#" class="filled-button">JAH BLESS</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>What the elders <em>say about us</em></h2>
+              <span>testimonials from the Rasta community</span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="owl-testimonials owl-carousel">
               
-      <p>Carefully cultivated for balance and potency.Every batch is tested for purity and safety.Promoting mindful and legal use of cannabis.</p>
-
-      <a href="about.html" class="btn primary">Learn More</a>
-    </div>
-
-  </div>
-</section>
-
-
-  <!-- ================= ABOUT US ================= -->
-
-
-
-
-  <!-- ================= FEATURED PRODUCTS ================= -->
-  <section class="featured">
-    <div class="container">
-      <h3 class="section-title">Featured Products</h3>
-      <div class="product-grid">
-
-        <div class="product-card">
-          <img src="./img/crystalweed-cannabis-2ZgivT-A2K4-unsplash.jpg" alt="Flower">
-          <h4>Premium Flower</h4>
-          <p>High-quality strains cultivated for balance and potency.</p>
+              <div class="testimonial-item">
+                <div class="inner-content">
+                  <h4>Ras Michael</h4>
+                  <span>Elder of Zion</span>
+                  <p>"I-n-I have walked with JAH HERBS from the beginning. The sacred herbs are pure, sun-grown, and carry the vibration of the hills. Blessed love."</p>
+                </div>
+                <img src="http://placehold.it/60x60" alt="Ras Michael">
+              </div>
+              
+              <div class="testimonial-item">
+                <div class="inner-content">
+                  <h4>Sista Imani</h4>
+                  <span>Ital Healer</span>
+                  <p>"The CBD balm healed my joints naturally. No chemicals, just pure earth medicine. JAH HERBS brings the roots back to our community. One love."</p>
+                </div>
+                <img src="http://placehold.it/60x60" alt="Sista Imani">
+              </div>
+              
+              <div class="testimonial-item">
+                <div class="inner-content">
+                  <h4>Brother Kwame</h4>
+                  <span>Nyabinghi Drummer</span>
+                  <p>"For meditation and groundation, their herbs carry the true spirit. I use the sacred ganja for chanting and the ital tea for daily wellness. Jah bless."</p>
+                </div>
+                <img src="http://placehold.it/60x60" alt="Brother Kwame">
+              </div>
+              
+              <div class="testimonial-item">
+                <div class="inner-content">
+                  <h4>Empress Zara</h4>
+                  <span>Roots Educator</span>
+                  <p>"The sample pack introduced me to real Rasta cultivation. Every leaf is handled with love and intention. JAH HERBS is the future of natural healing."</p>
+                </div>
+                <img src="http://placehold.it/60x60" alt="Empress Zara">
+              </div>
+              
+            </div>
+          </div>
         </div>
-
-        <div class="product-card">
-          <img src="./img/jeff-w-7N5Ns214iiw-unsplash.jpg" alt="Edibles">
-          <h4>Edibles</h4>
-          <p>Carefully dosed for consistent and enjoyable experiences.</p>
-        </div>
-
-        <div class="product-card">
-          <img src="./img/crystalweed-cannabis-i11Di7CACfc-unsplash.jpg" alt="Oils">
-          <h4>Oils & Vapes</h4>
-          <p>Refined extracts for convenience and precision.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= WHY CHOOSE US ================= -->
-  <section class="why-us">
-    <div class="container">
-      <h3 class="section-title">Why Choose GreenLeaf</h3>
-      <div class="why-grid">
-
-        <div class="why-card">
-          <h4>🌱 Sustainably Grown</h4>
-          <p>Our products are cultivated using ethical and environmentally conscious methods.</p>
-        </div>
-
-        <div class="why-card">
-          <h4>🧪 Lab Tested</h4>
-          <p>Every batch is tested to ensure quality, purity, and safety.</p>
-        </div>
-
-        <div class="why-card">
-          <h4>🔒 Fully Compliant</h4>
-          <p>We operate strictly within legal frameworks and regulations.</p>
-        </div>
-
-        <div class="why-card">
-          <h4>🧠 Mindful Use</h4>
-          <p>Designed for informed, responsible, and balanced consumption.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-<!-- ================= EXPERIENCE TEASER ================= -->
-<section class="experience">
-  <div class="experience-bg"></div>
-  <div class="container experience-grid">
-
-    <!-- Left Column: Text -->
-    <div class="experience-text">
-      <h3>Discover the <span>GreenLeaf Experience</span></h3>
-      <p>
-        From seed to your lifestyle, we bring you premium cannabis with 
-        transparency, responsibility, and modern elegance. Dive into an 
-        experience crafted for enthusiasts and mindful users alike.
-      </p>
-      <a href="experience.html" class="btn primary">Explore the Experience</a>
-    </div>
-
-    <!-- Right Column: Floating Cards / Highlights -->
-    <div class="experience-cards">
-      <div class="card fade-in" style="--delay:0s;">
-        <h4>🌱 Cultivation</h4>
-        <p>Ethically grown using sustainable methods.</p>
-      </div>
-      <div class="card fade-in" style="--delay:0.2s;">
-        <h4>🧪 Lab Tested</h4>
-        <p>Consistency, safety, and quality assured.</p>
-      </div>
-      <div class="card fade-in" style="--delay:0.4s;">
-        <h4>🎯 Lifestyle</h4>
-        <p>Seamless integration into modern, mindful lifestyles.</p>
       </div>
     </div>
 
-  </div>
-</section>
-
-
-  <!-- ================= RESPONSIBLE USE ================= -->
-  <section class="responsible">
-    <div class="container">
-      <p>
-        GreenLeaf promotes responsible use. Do not drive or operate machinery while under
-        the influence. Keep out of reach of minors.
-      </p>
-    </div>
-  </section>
-
-  <!-- ================= FOOTER ================= -->
- <!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="container footer-grid">
-
-    <!-- Column 1: About -->
-    <div class="footer-about">
-      <h4>GreenLeaf</h4>
-      <p>
-        Premium cannabis crafted with care and responsibility. Elevate your lifestyle with ethically sourced products and mindful experiences.
-      </p>
-    </div>
-
-    <!-- Column 2: Quick Links -->
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 3: Contact -->
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <p><i class="fas fa-phone-alt"></i> +27 123 456 7890</p>
-      <p><i class="fas fa-envelope"></i> info@greenleaf.co.za</p>
-      
-        <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.tiktok.com/@YourPage" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://wa.me/271234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      
+    <div class="callback-form">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Request a <em>call back</em></h2>
+              <span>Etiam suscipit ante a odio consequat</span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="contact-form">
+              <form id="contact" action="" method="post">
+                <div class="row">
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="border-button">Send Message</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-  </div>
+    
 
-  <!-- Bottom Bar -->
-  <div class="footer-bottom">
-    <p>© 2026 GreenLeaf. 18+ Only | Use Responsibly</p>
-  </div>
-</footer>
+   <!-- Footer Starts Here -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 footer-item">
+            <h4>JAH HERBS</h4>
+            <p>Roots run deep in Zion. I-n-I cultivate sacred herbs the Rastafari way — no chemicals, only natural healing handed down by the elders.</p>
+            <ul class="social-icons">
+              <li><a rel="nofollow" href="https://fb.com/templatemo" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://wa.me/+27717490903?text=I%20want%20to%20place%20an%20order"><i class="fa fa-whatsapp"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item">
+            <h4>Roots Links</h4>
+            <ul class="menu-list">
+              <li><a href="#">Sacred Herbs</a></li>
+              <li><a href="#">Ital Remedies</a></li>
+              <li><a href="#">Meditation Tools</a></li>
+              <li><a href="#">Rasta Wisdom</a></li>
+              <li><a href="#">Groundation</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item">
+            <h4>JAH Paths</h4>
+            <ul class="menu-list">
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">How We Cultivate</a></li>
+              <li><a href="#">Elders Support</a></li>
+              <li><a href="#">Zion Contact</a></li>
+              <li><a href="#">Sacred Promise</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item last-item">
+            <h4>Send I-n-I a message</h4>
+            <div class="contact-form">
+              <form id="contact footer-contact" action="" method="post">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Your Rasta name" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="Jah Mail address" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your blessing / inquiry" required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="filled-button">JAH LOVE</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="sub-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>Copyright &copy; 2026 JAH HERBS
+            
+           </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- JS -->
-  <script src="js/main.js"></script>
-</body>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="./js/custom.js"></script>
+    <script src="./js/owl.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/accordions.js"></script>
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
+  </body>
 </html>
